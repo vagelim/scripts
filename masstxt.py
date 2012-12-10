@@ -11,7 +11,7 @@ password = b64.b64decode('ENCODED GV PASS')
 user = b64.b64decode('ENCODED GV USR')
 voice.login(user, password)
 
-phoneNumber = 'CELLPHONE NUMBER (associated with GV account)'
+phoneNumber = '123-456-7890 (cell #associated with GV account)'
 
 textReader = csv.reader(open('/PATH/TO/PARTY/LIST/party_txt_list.txt','rb'), delimiter=',')
 
