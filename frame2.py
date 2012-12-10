@@ -3,7 +3,7 @@ import redis
 import transactionLog as Trans
 import random
 import hashlib
-SERVER = 'vageli.mooo.com'
+SERVER = 'redis_test_server.com'
 PORT   = 6379
 DEBUG  = 1
 DB     = 0
