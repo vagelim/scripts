@@ -8,3 +8,5 @@ Random scripts
 - **masstxt.py**        - script that takes a CSV file of phone numbers and sends a text to all of them (Google Voice account required)
 
 - **tweet_backup.py**   - backs up a given user's public timeline (takes the user as only argument)
+
+- **webcamShot**        - bash script to take a screenshot and save it to /tmp (requires vlc)
