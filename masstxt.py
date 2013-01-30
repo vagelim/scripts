@@ -26,14 +26,14 @@ def massTXT():
 	#mass is a string prepended to the text to indicate it is a group message
 	#leave blank for no prepended text
   mass = "massTXT:"
-	try:
+  try:
 	#program expects text to be first commandline argument to program
-		text = sys.argv[1]
-	except IndexError:
-		print "Need message"		
-		exit()
-	for each in text_list:
-		voice.send_sms(each, mass + text)
+	text = sys.argv[1]
+  except IndexError:
+	print "Need message"		
+	exit()
+  for each in text_list:
+	voice.send_sms(each, mass + text)
 	
 
 if __name__ == '__main__':
