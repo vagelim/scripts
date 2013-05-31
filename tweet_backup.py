@@ -3,6 +3,12 @@ import sys
 import os
 import commands
 
+##########
+#Program takes only one argument
+#1st argument - twitter handle
+##########
+
+
 def clean_tweets(tweets):
     tweet_file = open(tweets, 'r')
     dirty = tweet_file.read()
