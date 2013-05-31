@@ -5,6 +5,11 @@ import commands
 import sys
 import base64 as b64 #Only used if you encode your password to keep from casual perusal
 import csv
+##########
+#Program expects two arguments
+#1st argument - Message to send (must be in quotes to capture whitespace)
+#2nd argument -(OPTIONAL) Path to comma separated file of phone numbers to send to
+##########
 
 voice = Voice()
 password = b64.b64decode('ENCODED GV PASS')
