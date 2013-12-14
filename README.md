@@ -15,5 +15,7 @@ Random scripts
 
 - **webcamShot**        - bash script to take a screenshot and save it to /tmp (requires vlc)
 
+- **wol.py**            - script that sends a magic packet to a hard coded (for now) MAC address
+
 
 - **OBSOLETE tweet_backup.py**   - backup functionality now included in twitter (backs up a given user's public timeline (takes the user as only argument))
