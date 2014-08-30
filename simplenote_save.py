@@ -1,4 +1,6 @@
 from simplenote import Simplenote
+import time
+t = time.strftime("%c")
 
 def save_notes():
 	user = ''
@@ -20,7 +22,9 @@ def save_notes():
 		print count
 		note += simple.get_note(l[0][count]['key'])
 		count += 1
-	file = open('tmp.txt', 'w')
+	filename = t + '.txt'
+	file = open(filename, 'w')
+	#To track progress
 	for item in note:
 		print >> file, item
 	file.close()
