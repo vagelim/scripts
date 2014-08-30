@@ -5,11 +5,13 @@ Random scripts
 
 - **frame2.py**         - redis framework that enables logging and secure storing of keys
 
-- **masstxt.py**        - script that takes a CSV file of phone numbers and sends a text to all of them (Google Voice account required)
+- **masstxt.py**        - python script that takes a CSV file of phone numbers and sends a text to all of them (Google Voice account required)
 
-- **postFlash**         - script that sets up TonidoPlug 1.0 after flashing to factory firmware
+- **postFlash**         - bash script that sets up TonidoPlug 1.0 after flashing to factory firmware
 
 - **qr.py**             - python script to convert data to a screen-printable QR code
+
+- **simplenote_save.py**- python script to save a user's entire simplenote account (includes deleted notes)
  
 - **verifyVIN.py**      - verifies a VIN based on the VIN checksum digit calculation
 
