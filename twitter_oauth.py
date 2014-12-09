@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #To get twitter oauth tokens
 #1. Get your consumer key and consumer secret from the app page on apps.twitter.com
 #2. Use the birdy python library
