@@ -15,7 +15,7 @@ Random scripts
 
 - **simplenote_save.py**- python script to save a user's entire simplenote account (includes deleted notes)
  
-- ** twit_post.py**     - script to allow twitter posting for multiple users via command line
+- **twit_post.py**     - script to allow twitter posting for multiple users via command line
 
 - **twitter_oauth.py**  - ease authentication when trying to run multiple bots from one posting script
 
