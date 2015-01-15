@@ -16,7 +16,7 @@ if __name__ == '__main__':
         import sys
 
         if len(sys.argv) > 2:
-                note = sys.argv[1:]
+                note = ' '.join(sys.argv[1:])
         else:
                 note = sys.argv[1]
                 
