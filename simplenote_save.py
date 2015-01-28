@@ -28,6 +28,9 @@ def save_notes():
 	for item in note:
 		print >> file, item
 	file.close()
+	#Dump note object to pickle for use by other programs
+	import pickle
+	pickle.dump(note, open( t + '.pickle', 'wb'))
 	
 if __name__ == '__main__':
 	save_notes()
