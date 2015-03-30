@@ -7,6 +7,8 @@ Random scripts
 
 - **masstxt.py**        - python script that takes a CSV file of phone numbers and sends a text to all of them (Google Voice account required)
 
+- **move_pics**         - python script to organize Dropbox's "Camera Uploads" folder, assuming directories already created for years and months 
+
 - **postFlash**         - bash script that sets up TonidoPlug 1.0 after flashing to factory firmware
 
 - **push_note.py**        push a note to all devices via pushbullet
