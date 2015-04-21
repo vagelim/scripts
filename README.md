@@ -21,7 +21,10 @@ Random scripts
 
 - **twitter_oauth.py**  - ease authentication when trying to run multiple bots from one posting script
 
+
 - **verifyVIN.py**      - verifies a VIN based on the VIN checksum digit calculation
+
+- **vv_concerts.py**    - parse list of artists playing in NYC according to the Village Voice (to be used in a another project)
 
 - **webcamShot**        - bash script to take a screenshot and save it to /tmp (requires vlc)
 
