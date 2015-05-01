@@ -30,6 +30,6 @@ Random scripts
 
 - **wol.py**            - script that sends a magic packet to a hard coded (for now) MAC address
 
-- **wordNeighbors.py**  - function that takes a text and a given string and returns the words surrounding the string - this will be used in a contextual search program which only displays words when they are near other specific words
-- 
+- **wordNeighbors.py**  - function that takes a text and a given string and returns the words surrounding the string; this will be used in a contextual search program which only displays words when they are near other specific words
+
 - **OBSOLETE tweet_backup.py**   - backup functionality now included in twitter (backs up a given user's public timeline (takes the user as only argument))
