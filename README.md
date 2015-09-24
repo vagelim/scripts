@@ -5,6 +5,8 @@ Random scripts
 
 - **frame2.py**         - redis framework that enables logging and secure storing of keys
 
+- **geoTranslate.py**   - simple little script to translate an address to its GPS coordinates
+
 - **masstxt.py**        - python script that takes a CSV file of phone numbers and sends a text to all of them (Google Voice account required)
 
 - **move_pics**         - python script to organize Dropbox's "Camera Uploads" folder, assuming directories already created for years and months 
