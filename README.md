@@ -7,6 +7,8 @@ Random scripts
 
 - **geoTranslate.py**   - simple little script to translate an address to its GPS coordinates
 
+- **goodReads.py**      - short script that takes your GoodReads to-read shelf and outputs the books with page length  originally made this to be part of a larger project that can suggest books based on how long you want to spend on it (in an age of nearly unlimited information, time becomes the limitation)
+
 - **masstxt.py**        - python script that takes a CSV file of phone numbers and sends a text to all of them (Google Voice account required)
 
 - **move_pics**         - python script to organize Dropbox's "Camera Uploads" folder, assuming directories already created for years and months 
