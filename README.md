@@ -1,7 +1,10 @@
 scripts
 =======
 
-Random scripts
+
+### random scripts
+
+- **add_note.py**  - add a note to SimpleNote (requires SimpleNote account)
 
 - **cam.py**    	  - very customized script that SSHs to my home network, finds my Android phone over the local network, and makes an SSH tunnel to it  
 
@@ -22,20 +25,22 @@ Random scripts
 - **qr.py**             - python script to convert data to a screen-printable QR code
 
 - **simplenote_save.py**- python script to save a user's entire simplenote account (includes deleted notes)
- 
-- **twit_post.py**     - script to allow twitter posting for multiple users via command line
-
-- **twitter_oauth.py**  - ease authentication when trying to run multiple bots from one posting script
 
 
 - **verifyVIN.py**      - verifies a VIN based on the VIN checksum digit calculation
 
 - **vv_concerts.py**    - parse list of artists playing in NYC according to the Village Voice (to be used in a another project)
 
-- **webcamShot**        - bash script to take a screenshot and save it to /tmp (requires vlc)
+- **webcamShot.sh**        - bash script to take a screenshot and save it to /tmp (requires vlc)
 
 - **wol.py**            - script that sends a magic packet to a hard coded (for now) MAC address
 
 - **wordNeighbors.py**  - function that takes a text and a given string and returns the words surrounding the string; this will be used in a contextual search program which only displays words when they are near other specific words
 
+
+#### Random twitter things
+
+- **twit_post.py**     - script to allow twitter posting for multiple users via command line
+
+- **twitter_oauth.py**  - ease authentication when trying to run multiple bots from one posting script
 - **OBSOLETE tweet_backup.py**   - backup functionality now included in twitter (backs up a given user's public timeline (takes the user as only argument))
