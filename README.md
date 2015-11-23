@@ -3,6 +3,8 @@ scripts
 
 Random scripts
 
+- **cam.py**    	  - very customized script that SSHs to my home network, finds my Android phone over the local network, and makes an SSH tunnel to it  
+
 - **frame2.py**         - redis framework that enables logging and secure storing of keys
 
 - **geoTranslate.py**   - simple little script to translate an address to its GPS coordinates
