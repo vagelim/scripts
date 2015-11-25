@@ -4,30 +4,23 @@ from datadog import initialize, api
 import json
 import sys
 
-KEYS = {'prod' : {'API' : 'key1' , 'APP' : 'app1'},
-        'personal' : {'API' : 'key2' , 'APP' : 'app2'},
-        'staging' : {'API' : 'key3' , 'APP' : 'app3'}
-        }
-
-def keys(x):
-    return KEYS[x]
-
 def main(board_id):
-    # Prompt for keys (don't store them in git)
-    print "prod, staging, or personal account? [type name]: "
-    case = raw_input()
-    try: #New line will raise an exception
-        if case not in KEYS.keys():
-            main(board_id)
-    except AttributeError:
-        main(board_id)
-    except KeyError:
-        pass
+    #Configure keys in settings.json
 
-    options = {
-        'api_key': keys(case)['API'],
-        'app_key': keys(case)['APP']
-    }
+    keys = json.load(open("settings.json"))
+
+    #List keys and wait for input:
+    case = raw_input("[ " + " ".join(keys.keys()) + " ]: ")
+
+    try:
+        options = {
+            'api_key': keys[case]['API'],
+            'app_key': keys[case]['APP']
+        }
+    except KeyError:
+        print "Invalid key"
+        return -1
+
     initialize(**options)    
 
     try:
@@ -37,7 +30,7 @@ def main(board_id):
         return -1
         
     if 'errors' in result:
-        print "Invalid board id. Maybe try a different account?\n Quitting..."
+        print "\nInvalid board id. Maybe try a different account?\nQuitting..."
         return -1
         
     with open( str(board_id) + '_screen.txt', 'w') as file:
@@ -50,4 +43,3 @@ if __name__ == '__main__':
     else:
         board_id = sys.argv[1]
     main(board_id)
-
