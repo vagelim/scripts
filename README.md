@@ -6,9 +6,9 @@ scripts
 
 - **add_note.py**  - add a note to SimpleNote (requires SimpleNote account)
 
-- **cam.py**    	  - very customized script that SSHs to my home network, finds my Android phone over the local network, and makes an SSH tunnel to it  
+- **cam.py**    	  - very customized script that SSHs to my home network, finds my Android phone over the local network, and makes an SSH tunnel to it for remote viewing  
 
-- **frame2.py**         - redis framework that enables logging and secure storing of keys
+- **frame2.py**         - incomplete redis framework with transaction logging and some other operations
 
 - **geoTranslate.py**   - simple little script to translate an address to its GPS coordinates
 
@@ -29,7 +29,7 @@ scripts
 
 - **verifyVIN.py**      - verifies a VIN based on the VIN checksum digit calculation
 
-- **vv_concerts.py**    - parse list of artists playing in NYC according to the Village Voice (to be used in a another project)
+- **vv_concerts.py**    -(obsolete, website change) parse list of artists playing in NYC according to the Village Voice (to be used in a another project)
 
 - **webcamShot.sh**        - bash script to take a screenshot and save it to /tmp (requires vlc)
 
@@ -40,7 +40,6 @@ scripts
 
 #### Random twitter things
 
-- **twit_post.py**     - script to allow twitter posting for multiple users via command line
-
-- **twitter_oauth.py**  - ease authentication when trying to run multiple bots from one posting script
+- **twit_post.py**     - multi-account command line tweeter for multiple accounts via command line  
+- **twitter_oauth.py**  - quickly get an auth token
 - **OBSOLETE tweet_backup.py**   - backup functionality now included in twitter (backs up a given user's public timeline (takes the user as only argument))
