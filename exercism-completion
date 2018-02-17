@@ -1,0 +1,26 @@
+# Exercism.io bash completion
+# On OSX, make sure you have bash_completion installed
+# `brew install bash_completion`
+# Drop this file in mv exercism-completion /usr/local/etc/bash_completion.d/exercism
+# Source it into your shell . /usr/local/etc/bash_completion.d/exercism
+
+ls /usr/local/etc/bash_completion.d > /dev/null 2>&1 &&
+_exercism()
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts="--help --config --verbose --version"
+
+    if [[ ${cur} == -* ]] ; then
+        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+        return 0
+    fi
+    opts="fetch submit configure debug download fetch list open restore skip status submit tracks unsubmit upgrade"
+    COMPREPLY=( $(compgen -W "${opts}" ${cur}) )
+    return 0
+}
+
+
+complete -F _exercism exercism

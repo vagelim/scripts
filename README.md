@@ -6,6 +6,7 @@ scripts
 
 - [add_note](/add_note.py)  - add a note to SimpleNote (requires SimpleNote account)
 - [cam](/cam.py)    	  - very customized script that SSHs to my home network, finds my Android phone over the local network, and makes an SSH tunnel to it for remote viewing  
+- [exercism-completion](/exercism-completion) - bash completion for [exercism.io](https://exercism.io)
 - [frame2](/frame2.py)         - incomplete redis framework with transaction logging and some other operations
 - [geoTranslate](/geoTranslate.py)   - simple little script to translate an address to its GPS coordinates
 - [goodReads](/goodReads.py)      - short script that takes your GoodReads to-read shelf and outputs the books with page length  originally made this to be part of a larger project that can suggest books based on how long you want to spend on it (in an age of nearly unlimited information, time becomes the limitation)
