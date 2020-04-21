@@ -62,7 +62,7 @@ def main(name):
     if not already_revoked:
         choice = input(f"Delete certificate from AWS? [y/N]: ")
     else:
-        choice = "n"
+        choice = "y"
 
     if "y" in choice:
         acm.delete_certificate(CertificateArn=chosen_cert)
