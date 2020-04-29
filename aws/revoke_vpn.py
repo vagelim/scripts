@@ -2,6 +2,13 @@
 import sys
 import boto3
 
+from signal import signal, SIGINT
+from sys import exit
+
+
+def handler(signal_received, frame):
+    exit(0)
+
 
 def main(name):
     acm = boto3.client("acm")
@@ -25,13 +32,29 @@ def main(name):
         print(f"No certificates found for {name}")
         return -1
 
+    MORE_METADATA = (
+        len(user_certs) > 1
+    )  # if there is more than one choice, show the user more metadata to make a better-informed decision
     # present choice of certs to user
     for i, cert in enumerate(user_certs):
+        metadata = acm.describe_certificate(
+            CertificateArn=user_certs[i]["CertificateArn"]
+        )["Certificate"]
+
         print(f"[{i}]: {cert['DomainName']}")
+        if MORE_METADATA:
+            print(f"\t[created]: {metadata['IssuedAt']}")
 
     disp_string = "" if len(user_certs) == 1 else f"-{len(user_certs) - 1}"
     choice = input(f"Certificate to delete [0{disp_string}]: ")
-    choice = int(choice)
+    try:
+        choice = int(choice)
+    except ValueError:
+        print(f"ERROR: {choice} is not a valid choice.")
+        exit(-1)
+    if choice > len(user_certs) - 1 or choice < 0:
+        print(f"ERROR: {choice} is not a valid choice.")
+        exit(-1)
 
     chosen_cert = user_certs[choice]["CertificateArn"]
     cert_serial = acm.describe_certificate(CertificateArn=chosen_cert)["Certificate"][
@@ -58,12 +81,12 @@ def main(name):
         print("Certificate has already been revoked")
         already_revoked = True
 
-    # Delete certificate?
     if not already_revoked:
         choice = input(f"Delete certificate from AWS? [y/N]: ")
     else:
         choice = "y"
 
+    # Delete certificate?
     if "y" in choice:
         acm.delete_certificate(CertificateArn=chosen_cert)
         print(f"Deleted {cert_serial}")
@@ -72,6 +95,7 @@ def main(name):
 
 
 if __name__ == "__main__":
+    signal(SIGINT, handler)
     if len(sys.argv) == 2:
         main(sys.argv[1])
     else:
