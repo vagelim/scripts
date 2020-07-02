@@ -2,6 +2,8 @@
 
 import sys
 
+# Generate the code needed to use your callsign with APRS
+
 def generate(callsign):
     seed = 0x73E2
 
