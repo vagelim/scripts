@@ -10,6 +10,7 @@ scripts
 - [frame2](/frame2.py)         - incomplete redis framework with transaction logging and some other operations
 - [geoTranslate](/geoTranslate.py)   - simple little script to translate an address to its GPS coordinates
 - [goodReads](/goodReads.py)      - short script that takes your GoodReads to-read shelf and outputs the books with page length  originally made this to be part of a larger project that can suggest books based on how long you want to spend on it (in an age of nearly unlimited information, time becomes the limitation)
+- [make_layer](./make_layer.sh)        - bash script to create a lambda layer using docker
 - [masstxt](/masstxt.py)        - python script that takes a CSV file of phone numbers and sends a text to all of them (Google Voice account required)
 - [move_pics](/move_pics.py)         - python script to organize Dropbox's "Camera Uploads" folder, assuming directories already created for years and months 
 - [postFlash](/postFlash)         - bash script that sets up TonidoPlug 1.0 after flashing to factory firmware
